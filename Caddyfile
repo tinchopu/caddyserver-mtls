@@ -1,0 +1,10 @@
+example.com {
+        tls {
+                client_auth {
+                        mode require_and_verify
+                        trusted_ca_cert_file /data/mtls/ca.crt
+                }
+        }
+
+        reverse_proxy https://www.google.com
+}
